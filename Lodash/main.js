@@ -77,6 +77,28 @@ const _ = {
 
     return undefined;
   },
+
+  drop(array, number) {
+    if (typeof number === "undefined") {
+      number = 1;
+    }
+
+    if (Array.isArray(array)) {
+      let newArray = array.slice(number);
+
+      return newArray;
+    }
+  },
+
+  dropWhile(array, predicate) {
+    const dropNumber = array.findIndex(function (element, index) {
+      return !predicate(element, index, array);
+    });
+
+    const droppedArray = this.drop(array, dropNumber);
+
+    return droppedArray;
+  },
 };
 
 // Do not write or modify code below this line.

@@ -99,6 +99,22 @@ const _ = {
 
     return droppedArray;
   },
+
+  chunk(array, size) {
+    if (typeof size === "undefined") {
+      size = 1;
+    }
+
+    const arrayChunks = [];
+
+    for (let i = 0; i < array.length; i += size) {
+      let arrayChunk = array.slice(i, i + size);
+
+      arrayChunks.push(arrayChunk);
+    }
+
+    return arrayChunks;
+  },
 };
 
 // Do not write or modify code below this line.

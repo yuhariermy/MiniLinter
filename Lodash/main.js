@@ -52,6 +52,31 @@ const _ = {
       return true;
     }
   },
+
+  invert(object) {
+    const invertedObject = {};
+
+    Object.entries(object).forEach((entry) => {
+      let key = entry[0];
+      let value = entry[1];
+
+      invertedObject[value] = key;
+    });
+
+    return invertedObject;
+  },
+
+  findKey(object, predicate) {
+    for (const key in object) {
+      let value = object[key];
+
+      if (predicate(value)) {
+        return key;
+      }
+    }
+
+    return undefined;
+  },
 };
 
 // Do not write or modify code below this line.

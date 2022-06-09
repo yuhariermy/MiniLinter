@@ -6,6 +6,8 @@ const speciesArray = [
 ];
 
 // Write your code here:
+const sortSpeciesByTeeth = (arr) =>
+  arr.sort((teeth1, teeth2) => teeth1.numTeeth > teeth2.numTeeth);
 
 // Feel free to comment out the code below when you're ready to test your function!
 

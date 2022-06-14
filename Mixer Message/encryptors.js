@@ -39,9 +39,10 @@ const symbolCipher = (str) => {
   let output = "";
   for (let i = 0; i < str.length; i++) {
     let char = str.toLowerCase()[i];
+
     symbols[char] ? (output += symbols[char]) : (output += char);
-    return output;
   }
+  return output;
 };
 
 const reverseCipher = (sentence) => {
@@ -53,7 +54,7 @@ const reverseCipher = (sentence) => {
 };
 
 module.exports = {
+  caesarCipher,
   symbolCipher,
   reverseCipher,
-  caesarCipher,
 };

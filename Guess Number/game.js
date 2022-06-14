@@ -13,11 +13,13 @@ module.exports = {
         "Choose a number from 1 through 10!\nIs the number ... "
       );
     } else if (input === secretValue) {
+      //   console.log(`Secret Number is: ${secretValue}`);
       process.stdout.write(
         "Woah you got it! Are you psychic? See you later!\n"
       );
       process.exit();
     } else {
+      //   console.log(`Secret Number is: ${secretValue}`);
       process.stdout.write("Nope. Guess again!\nIs the number ... ");
     }
   },

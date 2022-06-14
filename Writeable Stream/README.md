@@ -1,0 +1,1 @@
+This folder is reminder how to use the writeable Stream on node.js 
